@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 ## CoShop Next
+=======
+## CoShop 
+>>>>>>> 47920299137f536b87f7a4fc67ce522651bfecb2
 
 Jamstack ECommerce Next provides a way to quickly get up and running with a fully configurable ECommerce site using Next.js.
 
 Out of the box, the site uses completely static data coming from a provider at `providers/inventoryProvider.js`. You can update this provider to fetch data from any real API by changing the call in the `getInventory` function.
 
+<<<<<<< HEAD
 <!-- ![Home](example-images/1.png) -->
+=======
+![Home]
+>>>>>>> 47920299137f536b87f7a4fc67ce522651bfecb2
 
 ### Live preview
 
@@ -31,7 +39,7 @@ Click [here](https://www.jamstackecommerce.dev/) to see a live preview.
 1. Clone the project
 
 ```sh
-$ git clone https://github.com/jamstack-cms/jamstack-ecommerce.git
+$ git clone https://github.com/karanY2019/coshop.git
 ```
 
 2. Install the dependencies:
