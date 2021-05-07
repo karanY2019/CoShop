@@ -8,23 +8,12 @@ Out of the box, the site uses completely static data coming from a provider at `
 
 ### Live preview
 
-Click [here](https://www.jamstackecommerce.dev/) to see a live preview.
+Click [here](https://coshop-dhstrp7b0-ky393-cornelledu.vercel.app/) to see a live preview.
 
 <details>
   <summary>Other Jamstack ECommerce pages</summary>
 
-### Category view
-![Category view](example-images/2.png)
 
-### Item view
-![Item view](example-images/3.png)
-
-### Cart view
-![Cart view](example-images/4.png)
-
-### Admin panel
-![Admin panel](example-images/5.png)
-</details>
 
 ### Getting started
 
