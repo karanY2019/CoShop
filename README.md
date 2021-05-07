@@ -4,14 +4,13 @@ A fully configurable ECommerce site using Next.js.
 
 Out of the box, the site uses completely static data coming from a provider at `providers/inventoryProvider.js`. You can update this provider to fetch data from any real API by changing the call in the `getInventory` function.
 
-Demo (coshop_demo.gif)
+Demo [demo](coshop_demo.gif)
 
 ### Live preview
 
 Click [here](https://coshop-dhstrp7b0-ky393-cornelledu.vercel.app/) to see a live preview.
 
-<details>
-  <summary>Other Jamstack ECommerce pages</summary>
+
 
 
 
