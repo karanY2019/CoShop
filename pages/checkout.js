@@ -141,6 +141,11 @@ const Checkout = ({ context }) => {
       >
         <div className="pt-10 pb-8">
           <h1 className="text-5xl font-light mb-6">Checkout</h1>
+
+          <h2 className="text-5xl font mb-6">Virtual Card Generated ! </h2>
+          <h3 className="text-3xl font mb-6 text-yellow-600">Card number: 3456 7900 1268 6969</h3>
+          <h3 className="text-3xl font mb-6 text-yellow-600">CSV: 206</h3>
+          <h3 className="text-2xl font mb-6 text-yellow-600">Expiration Date: 05-07-2021</h3>
           <Link href="/cart">
             <a aria-label="Cart">
               <div className="cursor-pointer flex  items-center">

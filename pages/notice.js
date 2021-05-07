@@ -8,13 +8,15 @@ function Notice () {
       <Head>
       <title>First Post</title>
     </Head>
-      <h1>You accepted Amy's CoShop Invitation !</h1>
+      <h1>Invitation token generated !</h1>
+      <h1>One time loggin account: david@coshop.com</h1>
+      <h1>One time loggin password: 111111</h1>
       <h2>
-        <Link href="/invited" className="flex flex-1 justify-end">
+        <Link href="/admin2" className="flex flex-1 justify-end">
         {/* <Link href="/invited"> */}
         <a aria-label="Join the Cart Now!">
            <div className="cursor-pointer flex items-center">
-           <p className="text-purple-600 text-bg mr-2">Join the Cart Now! </p>
+           <p className="text-purple-600 text-bg mr-2">Confirm </p>
            <FaLongArrowAltRight className="text-purple-600" />
        </div>
        </a>

@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import Link from 'next/link'
+import { FaTimes, FaLongArrowAltRight } from 'react-icons/fa'
 // import logo from './logo.svg';
 // import './App.css';
 import {Button, Alert, Breadcrumb, Card, Container, Form, Row, Col} from 'react-bootstrap'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 // import firebase from 'firebase';
-
+import { useRouter } from 'next/router'
+import Image from '../components/Image'
 import firebase from '@firebase/app';
 require('firebase/auth');
 
@@ -25,6 +28,23 @@ firebase.initializeApp(firebaseConfig);
 export const googleProvider = new firebase.auth.GoogleAuthProvider();
 export const facebookProvider = new firebase.auth.FacebookAuthProvider();
 
+const StoreButton = ( ) => {
+  const router = useRouter()
+  function navigate() {
+    router.push('/')
+  }
+  return (
+    // <div>
+      <div className="sm-yellow-300 p-1 pb-1 smpb-2 ">
+        {/* // p-6 pb-10 smpb-6
+        // flex lg:flex-row flex-col"> */}
+      <Button
+        onClick={navigate}
+        title="Select "
+      />
+    </div>
+  )
+}
 
 class Collabrators extends React.Component {
   state = {
@@ -108,8 +128,7 @@ class SignInScreen extends React.Component {
     
     this.unregisterAuthObserver = firebase.auth().onAuthStateChanged(
        (user) => this.setState({isSignedIn: !!user})
-    );
-   
+    ); 
   }
 
   // Make sure we un-register Firebase observers when the component unmounts.
@@ -131,6 +150,62 @@ class SignInScreen extends React.Component {
       <div>
         <h1>CoShop</h1>
         <div class="align-login-item-centre">
+        <p>Welcome ! You are now signed-in!</p>
+        
+
+      <h1 className="text-5xl font-light">Find a store: </h1>
+      
+      <div className="border-b py-20" >
+        <div className="flex items-center hidden md:flex">
+          <Image className="w-32 m-0" src="/products/egg.png" alt='item 1' />
+          <p className="m-0 pl-10 text-gray-600 w-60">
+          <h2>
+        <Link href="/" className="flex flex-1 justify-end">
+        <a aria-label="Start Shopping">
+           <div className="cursor-pointer flex items-center">
+           <p className="text-blue-600 text-bg mr-2">Whole Food </p>
+           <FaLongArrowAltRight className="text-purple-600" />
+           </div>
+       </a>
+        </Link>
+      </h2>
+           </p>
+            {/* <p className="m-0 pl-10 text-gray-600 w-60">
+            <StoreButton /></p>  */}
+        </div> 
+        
+        <div className="flex items-center hidden md:flex">
+          <Image className="w-32 m-0" src="/products/chip.png" alt='item 1' />                
+          <p className="m-0 pl-10 text-gray-600 w-60">
+          <h2>
+        <Link href="/" className="flex flex-1 justify-end">
+        <a aria-label="Start Shopping">
+           <div className="cursor-pointer flex items-center">
+           <p className="text-blue-600 text-bg mr-2">Walmart </p>
+           <FaLongArrowAltRight className="text-purple-600" />
+           </div>
+       </a>
+        </Link>
+      </h2>
+           </p>
+        </div>
+
+        <div className="flex items-center hidden md:flex">
+          <Image className="w-32 m-0" src="/products/chip.png" alt='item 1' />                
+          <p className="m-0 pl-10 text-gray-600 w-60">
+          <h2>
+        <Link href="/" className="flex flex-1 justify-end">
+        <a aria-label="Start Shopping">
+           <div className="cursor-pointer flex items-center">
+           <p className="text-blue-600 text-bg mr-2">Kroger </p>
+           <FaLongArrowAltRight className="text-purple-600" />
+           </div>
+       </a>
+        </Link>
+      </h2>
+           </p>
+        </div>
+      </div>
         {/* <Card className="mb-3" style={{color: "#000", width: '30rem'}}>
           <Card.Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK4aQGQczM3a39lujDohb4FjYXLKTexZU1MQ&usqp=CAU/160/50"/>
           <Card.Body>
@@ -143,14 +218,14 @@ class SignInScreen extends React.Component {
           </Card.Body>
         </Card> */}
 
-        <Breadcrumb>
+        {/* <Breadcrumb>
           <Breadcrumb.Item>About</Breadcrumb.Item>
           <Breadcrumb.Item>Stores</Breadcrumb.Item>
           <Breadcrumb.Item>Location</Breadcrumb.Item>
           <Breadcrumb.Item active>Test</Breadcrumb.Item>
-        </Breadcrumb>
+        </Breadcrumb> */}
         <Container>
-        <p>Welcome ! You are now signed-in!</p>
+        
 
         {/* <p>Welcome {firebase.auth().currentUser.displayName}! You are now signed-in!</p> */}
         {/* <p> E-mail: {firebase.auth().currentUser.email}   </p> */}

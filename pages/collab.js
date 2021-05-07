@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import  Button  from '../components/Button';
 import { useRouter } from 'next/router'
-
+import Image from '../components/Image'
 const CollabButton = ( ) => {
   const router = useRouter()
   function navigate() {
@@ -10,7 +10,7 @@ const CollabButton = ( ) => {
   }
   return (
     // <div>
-      <div className="bg-yellow-200 p-3 pb-5 smpb-3 ">
+      <div className="sm-yellow-300 p-1 pb-1 smpb-2 ">
         {/* // p-6 pb-10 smpb-6
         // flex lg:flex-row flex-col"> */}
       <Button
@@ -27,12 +27,48 @@ function Collab () {
         <Head>
         <title>First Post</title>
       </Head>
-        <h10>My Collaborators</h10>
+      <h1 className="text-5xl font-light">My Recent Collaborators</h1>
+      
+      <div className="border-b py-20" >
+        <div className="flex items-center hidden md:flex">
+          <Image className="w-32 m-0" src="/users/david.png" alt='item 1' />
+          <p className="m-0 pl-10 text-gray-600 w-60">
+            David</p>
+            <p className="m-0 pl-10 text-gray-600 w-60">
+            <CollabButton /></p> 
+        </div> 
+        
+        <div className="flex items-center hidden md:flex">
+          <Image className="w-32 m-0" src="/users/yuxin.png" alt='item 1' />                
+          <p className="m-0 pl-10 text-gray-600 w-60">
+            Yuxin </p>
+            <p className="m-0 pl-10 text-gray-600 w-60">
+            <CollabButton /></p>
+        </div>
+
+        <div className="flex items-center hidden md:flex">
+          <Image className="w-32 m-0" src="/users/zekun.png" alt='item 1' />                
+          <p className="m-0 pl-10 text-gray-600 w-60">
+            Zekun </p>
+          <p className="m-0 pl-10 text-gray-600 w-60">
+            <CollabButton /></p>
+        </div>
+
+        <div className="flex items-center hidden md:flex">
+          <Image className="w-32 m-0" src="/users/karan.png" alt='item 1' />                
+          <p className="m-0 pl-10 text-gray-600 w-60">
+            Karan </p>
+          <p className="m-0 pl-10 text-gray-600 w-60">
+            <CollabButton /></p>
+        </div>
+    </div>
+
+        {/* <h10>My Collaborators</h10>
         <h1>My Collaborators 1</h1>
         <h1>My Collaborators 2</h1>
-        <h1>My Collaborators 3</h1>
+        <h1>My Collaborators 3</h1> */}
         <h2>
-        <CollabButton />
+        {/* <CollabButton /> */}
           {/* <Link href="/notice">
             <a>Invite !</a>
           </Link> */}

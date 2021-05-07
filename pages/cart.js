@@ -142,12 +142,15 @@ const Cart = ({ context }) => {
             <p className="text-sm pr-10">Total</p>
             <p className="font-semibold tracking-wide">{DENOMINATION + total}</p>
       </div>
+      <p className="text-red-600 text-sm mr-2">Not eligable for minimum free delivery ! </p>
       {!cartEmpty && (
+
             <Link href="/collab" className="flex flex-1 justify-end">
               <a aria-label="Check out">
                 <div className="cursor-pointer flex items-center">
-                  <p className="text-gray-600 text-sm mr-2">Invite Collaborators </p>
-                  <FaLongArrowAltRight className="text-gray-600" />
+                  
+                  <p className="text-yellow-600 text-bg mr-8">Invite Collaborators </p>
+                  <FaLongArrowAltRight className="text-yellow-600" />
                 </div>
               </a>
             </Link>  
@@ -162,18 +165,14 @@ const Cart = ({ context }) => {
 
               <a aria-label="Check out">
                 <div className="cursor-pointer flex items-center">
-                  <p className="text-gray-600 text-sm mr-2">Proceed to check out</p>
-                  <FaLongArrowAltRight className="text-gray-600" />
+                  <p className="text-blue-600 text-sm mr-8">Proceed to check out</p>
+                  <FaLongArrowAltRight className="text-blue-600" />
                 </div>
               </a>
             </Link>  
           )}         
         </div>
-      </div>
-
-          
-        
-      
+      </div> 
     </>
   )
 }
@@ -183,8 +182,7 @@ function CartWithContext(props) {
     <ContextProviderComponent>
       <SiteContext.Consumer>
         {
-          context => <Cart {...props} context={context} />
-          
+          context => <Cart {...props} context={context} />       
           
         }
       </SiteContext.Consumer>
@@ -192,6 +190,5 @@ function CartWithContext(props) {
      
   )
 }
-
 
 export default CartWithContext

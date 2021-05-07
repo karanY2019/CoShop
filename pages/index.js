@@ -29,13 +29,9 @@ const Home = ({ inventoryData = [], categories: categoryData = [] }) => {
   const inventory = inventoryData.slice(0, 4)
   const categories = categoryData.slice(0, 2)
 
-  return (
-
-    
+  return ( 
     <>
      <CollabButton />
-     
-    
     <h1 className="title">
     {' '}
        {/* {' '}
@@ -54,23 +50,23 @@ const Home = ({ inventoryData = [], categories: categoryData = [] }) => {
         <div className="bg-blue-300
         p-6 pb-10 smpb-6
         flex lg:flex-row flex-col">
-          <div className="pt-4 pl-2 sm:pt-12 sm:pl-12 flex flex-col">
+          <div className="pt-2 pl-2 sm:pt-12 sm:pl-12 flex flex-col">
             <Tag
               year="2021"
-              category="SOFAS"
+              category="Collabrative Grocery Shopping"
             />
             <Center
               price="200"
-              title={inventory[2].name}
-              link={`/product/${slugify(inventory[2].name)}`}
+              title={inventory[0].name}
+              link={`/product/${slugify(inventory[0].name)}`}
             />
             <Footer
-              designer="Jason Bourne"
+              designer="coshop team"
             />
           </div>
           <div className="flex flex-1 justify-center items-center relative">
               <Showcase
-                imageSrc={inventory[2].image}
+                imageSrc={inventory[0].image}
               />
               <div className="absolute
               w-48 h-48 sm:w-72 sm:h-72 xl:w-88 xl:h-88
@@ -84,16 +80,17 @@ const Home = ({ inventoryData = [], categories: categoryData = [] }) => {
         grid gap-4 my-4 
       ">
         <DisplayMedium
-          imageSrc={categories[0].image}
-          subtitle={`${categories[0].itemCount} items`}
-          title={titleIfy(categories[0].name)}
-          link={`/category/${slugify(categories[0].name)}`}
-        />
-        <DisplayMedium
           imageSrc={categories[1].image}
           subtitle={`${categories[1].itemCount} items`}
           title={titleIfy(categories[1].name)}
           link={`/category/${slugify(categories[1].name)}`}
+        />
+        <DisplayMedium
+          imageSrc={categories[0].image}
+          subtitle={`${categories[0].itemCount} items`}
+          title={titleIfy(categories[0].name)}
+          // title={titleIfy('Apple')}
+          link={`/category/${slugify(categories[0].name)}`}
         />
       </div>
       <div className="pt-10 pb-6 flex flex-col items-center">
@@ -125,7 +122,7 @@ const Home = ({ inventoryData = [], categories: categoryData = [] }) => {
         <DisplaySmall
           imageSrc={inventory[3].image}
           title={inventory[3].name}
-          subtitle={inventory[3].categories[0]}
+          subtitle={inventory[3].categories[1]}
           link={`/product/${slugify(inventory[3].name)}`}
         />
       </div>
